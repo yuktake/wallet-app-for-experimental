@@ -1,0 +1,24 @@
+.wallet-card {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+/* wallet-card内の要素の間隔開ける */
+.wallet-card > * {
+    margin-right: 10px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title > * {
+    margin-right: 10px;
+}

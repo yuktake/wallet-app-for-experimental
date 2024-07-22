@@ -1,0 +1,39 @@
+version: '3'
+services:
+  # Rails バックエンド
+  api:
+    build: ./api
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 8080 -b '0.0.0.0'"
+    ports:
+      - 8080:8080
+    volumes:
+      - ./api:/myapp
+    depends_on:
+      - db
+    stdin_open: true
+    tty: true
+
+  # Vite React フロントエンド
+  front:
+    build: ./front
+    command: ["npm","run","dev"]
+    ports:
+      - 5173:5173
+    volumes:
+      - ./front:/myapp
+    depends_on:
+      - api
+  
+  db:
+    platform: linux/x86_64
+    container_name: mysql8
+    image: mysql:8.0
+    ports:
+      - 13307:3306
+    volumes:
+    - ./db/.data/db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test
+    restart: always

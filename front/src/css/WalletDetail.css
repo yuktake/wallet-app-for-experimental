@@ -1,0 +1,95 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 85vh;
+}
+
+.wallet-name {
+    height: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.wallet-balance {
+    height: 5%;
+}
+
+.action-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.wallet-details {
+    width: 80%;
+    height: 70%;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.history {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.history-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width:  95%;
+}
+
+.history-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.blue {
+    background-color: blue;
+    width: 1%;
+    height: 100%;
+}
+
+.red {
+    background-color: red;
+    width: 1%;
+    height: 100%;
+}
+
+.gray {
+    color: gray;
+}
+
+.history-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.history-result {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    width: 100%;
+    height: 100%;
+}
